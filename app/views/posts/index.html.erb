@@ -1,0 +1,43 @@
+<big>
+    <%= link_to "投稿する", new_post_path %>
+</big>
+<hr>
+
+<div>
+    <%= form_tag(posts_path, method: "get") do %>
+    <%= label_tag :bosyuu, "募集形式：" %>
+    <%= select_tag :bosyuu, options_for_select(Post.bosyuus), include_blank: true %>
+        <%= label_tag :prefecture, "都道府県：" %>
+        <%= select_tag :prefecture, options_for_select(Post.prefectures), include_blank: true%>
+        <%= label_tag :spo_cate, "スポーツ：" %>
+        <%= select_tag :spo_cate, options_for_select(Post.spo_cates), include_blank: true%>
+
+        <%= submit_tag "検索" %>
+    <% end %>
+</div>
+
+    <div id="post-list">
+        <ul class = "cols-3">
+        <% @posts.each do |post| %>
+            <li ><a>
+                <%= link_to image_tag(post.image_url.to_s), post_path(post)if post.image? %>
+                <%= link_to post.title, post_path(post) %><br>
+
+                <% if post.text.size < 81 %>
+                    <%= post.text %>
+                <% else %>
+                    <%= post.text[0..79] + "..." %>
+                <% end %>
+                <p>
+                        <%= post.bosyuu %>
+                        <%= post.prefecture %>
+                        <%= post.spo_cate %>
+                </p>
+            </a></li>
+        <% end %>
+        </ul>
+    </div>
+
+    <center>
+        <%= paginate @posts, outer_window: 1, window: 1 %> <%# outer_windowの値が2の場合 1 2.. (4) .. 99 100 %><%# windowの値が2の場合 .. 2 3 (4) 5 6 ..%>
+    </center>
