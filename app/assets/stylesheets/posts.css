@@ -18,7 +18,7 @@
   list-style-type:none;
   float:left; /*floatで横並びに*/
   border:1px solid #aaa;/*枠の色*/
-  height:28em;
+  height:27em;
   padding-left:0.3%;/*カラム間のガターを３つで設定してる*/
   margin-bottom:20px;
   text-align:center;
