@@ -4,5 +4,60 @@
 <%= @post.spo_cate %>
 <%#= link_to "編集する", edit_post_path(@post) %>
 <%#= link_to "削除する", post_path(@post), method: :delete, data: { confirm: "本当に削除しますか？"} %><br><br><br>
+<div class="social">
+
+    <!-- Facebook -->
+    <div class=" facebook">
+        <div id="fb-root"></div>
+        <div class="fb-like"
+            data-href="<%= request.original_url %>"
+            data-layout="button_count"
+            data-send="false"
+            data-width="120"
+            data-show-faces="false">
+        </div>
+    </div>
+
+    <!-- Twitter -->
+    <div class=" twitter">
+        <a href="https://twitter.com/share" class="twitter-share-button"
+            data-lang="en"
+            data-url="<%= request.original_url %>"
+            data-text="<%= @post.title %>"
+        >Tweet</a>
+    </div>
+
+    <!-- Pocket -->
+    <div class=" pocket">
+        <a href="https://getpocket.com/save" class="pocket-btn"
+            data-lang="en"
+        data-save-url="<%= request.original_url %>"
+        data-pocket-count="horizontal"
+        data-pocket-align="left"
+      >Pocket</a>
+    </div>
+
+    <!-- Google plusone -->
+    <div class=" google">
+        <div class="g-plusone"
+            data-size="medium"
+            data-href="<%= request.original_url %>">
+        </div>
+    </div>
+
+    <!-- Hatena -->
+    <div class=" hatena">
+        <a href="http://b.hatena.ne.jp/entry/<%= request.original_url %>"
+            class="hatena-bookmark-button"
+            data-hatena-bookmark-layout="standard"
+            data-hatena-bookmark-lang="ja"
+            title="このエントリーをはてなブックマークに追加">
+            <img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+            alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+            style="border: none">
+        </a>
+    </div>
+</div>
+
 <%= image_tag @post.image_url.to_s if @post.image? %><br><br><br>
 <%= raw Rinku.auto_link(h(@post.text)) %>

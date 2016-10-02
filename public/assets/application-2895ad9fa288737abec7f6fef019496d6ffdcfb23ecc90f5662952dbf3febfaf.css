@@ -1,0 +1,100 @@
+.social {
+    overflow: hidden;
+    margin-right: 5px;
+    margin-bottom: 4px;
+}
+
+    .facebook {
+        margin-right: 17px;
+        float: left;
+    }
+    .twitter {
+        width: 90px;
+        float: left;
+    }
+    .pocket {
+        width: 100px;
+        float: left;
+    }
+    .google {
+        width: 70px;
+        float: left;
+    }
+    .hatena {
+        margin-right: 17px;
+        float: left;
+    }
+
+
+
+#post-list ul{
+  margin-left:-20px;/*１カラムのpadding分マイナスマージン*/
+  overflow:hidden;
+  background-color:transparent;
+}
+
+#post-list ul  a{
+ display: block;
+}
+
+#post-list ul a:hover {
+ opacity: 0.8; /*透明*/
+}
+
+#post-list  ul li{
+  list-style-type:none;
+  float:left; /*floatで横並びに*/
+  border:1px solid #aaa;/*枠の色*/
+  height:28em;
+  padding-left:0.3%;/*カラム間のガターを３つで設定してる*/
+  margin-bottom:20px;
+  text-align:center;
+  position:relative;
+}
+
+#post-list ul  p{
+    font-size: small;
+    position: absolute;
+    bottom: 0;
+    color: gray;
+}
+
+.inner{ /*カラムの内側*/
+  margin:0;
+  height:100%;
+  background:white;
+}
+
+@media only screen and (min-width: 769px) {
+ li{
+      width: 32%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+ li{
+      width: 49%;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+ li{
+      width: 99%;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

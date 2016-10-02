@@ -1,3 +1,30 @@
+.social {
+    overflow: hidden;
+    margin-right: 5px;
+    margin-bottom: 4px;
+}
+
+    .facebook {
+        margin-right: 17px;
+        float: left;
+    }
+    .twitter {
+        width: 90px;
+        float: left;
+    }
+    .pocket {
+        width: 100px;
+        float: left;
+    }
+    .google {
+        width: 70px;
+        float: left;
+    }
+    .hatena {
+        margin-right: 17px;
+        float: left;
+    }
+
 
 
 #post-list ul{
@@ -18,7 +45,7 @@
   list-style-type:none;
   float:left; /*floatで横並びに*/
   border:1px solid #aaa;/*枠の色*/
-  height:27em;
+  height:28em;
   padding-left:0.3%;/*カラム間のガターを３つで設定してる*/
   margin-bottom:20px;
   text-align:center;
