@@ -60,4 +60,4 @@
 </div>
 
 <%= image_tag @post.image_url.to_s if @post.image? %><br><br><br>
-<%= raw Rinku.auto_link(h(@post.text)) %>
+<%= raw Rinku.auto_link(simple_format(h(@post.text))) %>
